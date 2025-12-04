@@ -1,0 +1,138 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body / page background */
+body {
+  background-color: #1e1e2f;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Page title */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4db6ac;
+  margin: 32px 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Services list container */
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+}
+
+/* Individual service items */
+li {
+  background: linear-gradient(145deg, #2c2c3e, #272738);
+  padding: 22px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+  background: linear-gradient(145deg, #3b3b57, #33334a);
+}
+
+/* Service name */
+li strong {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #4dd0e1;
+  letter-spacing: 0.5px;
+}
+
+/* Service location */
+li span {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-bottom: 16px;
+}
+
+/* Delete button */
+button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #4db6ac;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+button:hover {
+  background-color: #00bfa5;
+  transform: scale(1.08);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  ul {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  ul {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  li {
+    padding: 18px;
+  }
+
+  li strong {
+    font-size: 1.1rem;
+  }
+
+  li span {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Smooth fade-in animation */
+li {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

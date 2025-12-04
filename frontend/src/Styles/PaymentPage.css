@@ -1,0 +1,80 @@
+.payment-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.payment-form {
+  width: 400px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.payment-form h2 {
+  text-align: center;
+  color: #4CAF50;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-wrapper label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76,175,80,0.3);
+}
+
+.input-wrapper button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.input-wrapper button:hover {
+  background-color: #388E3C;
+}
+
+.success-msg {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.error-msg {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}

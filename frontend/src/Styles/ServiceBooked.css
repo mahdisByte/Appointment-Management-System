@@ -1,0 +1,150 @@
+/* Page container for flex layout */
+.service-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full screen height */
+  background-color: #f9fafb;
+}
+
+/* Main content takes all space */
+.service-booked-container {
+  flex: 1;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title */
+.service-booked-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #111827;
+  text-align: center;
+}
+
+/* No bookings text */
+.no-bookings {
+  text-align: center;
+  font-size: 1rem;
+  color: #6b7280;
+  margin-top: 20px;
+}
+
+/* Table wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+/* Table styling */
+.service-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* Table head */
+.service-table thead tr {
+  background-color: #2563eb; /* Tailwind Blue-600 */
+  color: Black;
+  text-align: center;
+  font-weight: 600;
+}
+
+.service-table th {
+  padding: 14px 16px;
+  font-size: 1rem;
+}
+
+/* Table body */
+.service-table td {
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #374151; /* Gray-700 */
+  border-bottom: 1px solid #e5e7eb; /* Gray-200 */
+}
+
+/* Row hover effect */
+.service-table tbody tr:hover {
+  background-color: #f3f4f6; /* Gray-100 */
+  transition: background-color 0.3s ease;
+}
+
+/* Status badges */
+.status-confirmed {
+  color: #16a34a; /* Green-600 */
+  font-weight: 600;
+}
+
+.status-pending {
+  color: #6b7280; /* Gray-500 */
+}
+
+.payment-paid {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.payment-unpaid {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* Action buttons */
+.action-button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 2px;
+  font-size: 0.9rem;
+}
+
+.button-confirm {
+  background-color: #10b981;
+  color: white;
+}
+
+.button-confirm:hover {
+  background-color: #059669;
+}
+
+.button-cancel {
+  background-color: #ef4444;
+  color: white;
+}
+
+.button-cancel:hover {
+  background-color: #b91c1c;
+}
+
+.button-available {
+  background-color: #fbbf24;
+  color: white;
+}
+
+.button-available:hover {
+  background-color: #f59e0b;
+}
+
+.service-available-text {
+  color: #ca8a04;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background-color: #1f2937; /* Gray-800 */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: auto; /* Push footer to bottom */
+}

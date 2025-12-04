@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Center container */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1e2348; /* same background as signup */
+}
+
+/* Card */
+.contact-card {
+  background: #2a2f5a;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Heading */
+.contact-title {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #a7a7ff; /* same accent color */
+}
+
+.contact-subtitle {
+  color: #ccc;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs & textarea */
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background-color: #1e2348;
+  color: white;
+  font-size: 16px;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+/* Button */
+.contact-btn {
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background-color: #a7a7ff;
+  color: #1e2348;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #8a8aff;
+  transform: scale(1.05);
+}
+
+/* Message */
+.contact-message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ff9a9a;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .contact-card {
+    padding: 30px 25px;
+  }
+
+  .contact-title {
+    font-size: 24px;
+  }
+
+  .contact-subtitle {
+    font-size: 13px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

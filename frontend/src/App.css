@@ -1,0 +1,240 @@
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* ==== HEADER STYLES ==== */
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(90deg, #6e8efb, #a777e3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* --- Left: Logo --- */
+.header-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #ffe082;
+}
+
+/* --- Center: Navigation --- */
+.header-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #f7f9fc;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffe082;
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #ffe082;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* --- Right: Profile Menu --- */
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile-menu-container {
+  position: relative;
+}
+
+.profile-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: linear-gradient(135deg, #edf2f7, #e2e8f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.profile-circle:hover {
+  border-color: #ffe082;
+  transform: scale(1.05);
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* --- Dropdown Menu --- */
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  min-width: 240px;
+  z-index: 110;
+  border: 1px solid #e2e8f0;
+  padding: 10px 0;
+  animation: dropdown-fade-in 0.25s ease-out;
+}
+
+@keyframes dropdown-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background-color: #f7fafc;
+  color: #6e8efb;
+}
+
+.dropdown-separator {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 8px 0;
+}
+
+.dropdown-user-info {
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown-user-info strong {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.dropdown-user-info span {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #e53e3e;
+  font-weight: 500;
+  width: 100%;
+  padding: 12px 20px;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-button:hover {
+  background-color: #fff5f5;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .header-center {
+    display: none; /* hide nav on small screens */
+  }
+}

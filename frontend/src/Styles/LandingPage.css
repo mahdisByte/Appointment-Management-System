@@ -1,0 +1,149 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Landing container */
+.landing-container {
+  background-color: #1e2348;
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 36px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #a7a7ff;
+  color: #1e2348;
+}
+
+/* Hero section */
+.hero {
+  position: relative;       /* make hero a relative container */
+  padding: 40px 80px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-text {
+  max-width: 550px;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  color: #d1d1d1;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  background: #a7a7ff;
+  color: #1e2348;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: fit-content;
+}
+
+.cta-btn:hover {
+  background: #8a8aff;
+  transform: scale(1.05);
+}
+
+/* Image pinned top-right using absolute positioning */
+.hero-image {
+  position: absolute;    /* absolute position */
+  top: 40px;             /* distance from top of hero */
+  right: 80px;           /* distance from right edge of hero */
+}
+
+.hero-image img {
+  width: 480px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 40px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    position: static;  /* let image flow below text on mobile */
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 300px;
+  }
+}

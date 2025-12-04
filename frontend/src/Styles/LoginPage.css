@@ -1,0 +1,120 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Center container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1e2348;
+  padding: 20px;
+}
+
+/* Card */
+.login-card {
+  background: #2a2f5a;
+  padding: 50px 60px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Heading */
+.login-card h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #a7a7ff;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Inputs */
+.login-form input {
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  background-color: #1e2348;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+}
+
+.login-form input::placeholder {
+  color: #ccc;
+}
+
+/* Submit button */
+.login-form button {
+  padding: 16px;
+  border: none;
+  border-radius: 35px;
+  background-color: #a7a7ff;
+  color: #1e2348;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.login-form button:hover {
+  background-color: #8a8aff;
+  transform: scale(1.05);
+}
+
+/* Message */
+.login-message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ff9a9a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 40px 25px;
+    max-width: 100%;
+  }
+
+  .login-card h2 {
+    font-size: 28px;
+  }
+
+  .login-form input,
+  .login-form button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+/* Increased spacing for messages */
+.login-message {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #ff9a9a;
+  text-align: center;
+}
+
+/* Add small spacing between form and signup link */
+.login-card p {
+  margin-top: 15px;
+  text-align: center;
+}
